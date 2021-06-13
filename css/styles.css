@@ -1,0 +1,9 @@
+.navbar {
+  box-shadow: 0 12px 40px rgba(128, 50, 0, 0.15); }
+
+#loginButton {
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.5); }
+
+#loginButton:hover {
+  color: rgba(0, 0, 0, 0.7); }
