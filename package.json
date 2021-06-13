@@ -1,0 +1,43 @@
+{
+  "name": "air-tools",
+  "version": "1.0.0",
+  "description": "'A project that provides tools for an hvac designer'",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "start": "npm run watch:all",
+    "scss": "node-sass -o css/ css/scss/",
+    "watch:scss": "onchange 'css/scss/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'",
+    "imagemin": "imagemin img/* -o dist/img",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run imagemin && npm run usemin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopher-nolan-X/air-tools.git"
+  },
+  "author": "Chris Hyatt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christopher-nolan-X/air-tools/issues"
+  },
+  "homepage": "https://github.com/christopher-nolan-X/air-tools#readme",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "imagemin-cli": "^6.0.0",
+    "lite-server": "^2.6.1",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.1.0",
+    "parallelshell": "^3.0.2",
+    "rimraf": "^3.0.2",
+    "usemin-cli": "^0.6.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  }
+}
